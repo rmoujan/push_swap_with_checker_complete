@@ -6,7 +6,7 @@
 /*   By: rmoujan < rmoujan@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 22:41:57 by rmoujan           #+#    #+#             */
-/*   Updated: 2022/02/19 16:48:20 by rmoujan          ###   ########.fr       */
+/*   Updated: 2022/02/19 17:57:05 by rmoujan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,13 @@ void	sa1(t_stack *a)
 	int	k;
 	int	tmp;
 
-	k = a->p;
-	tmp = a->array[k];
-	a->array[k] = a->array[k - 1];
-	a->array[k - 1] = tmp;
+	if (a->p > 0)
+	{
+		k = a->p;
+		tmp = a->array[k];
+		a->array[k] = a->array[k - 1];
+		a->array[k - 1] = tmp;
+	}
 }
 
 void	sb1(t_stack *b)
@@ -28,10 +31,13 @@ void	sb1(t_stack *b)
 	int	k;
 	int	tmp;
 
-	k = b->p;
-	tmp = b->array[k];
-	b->array[k] = b->array[k - 1];
-	b->array[k - 1] = tmp;
+	if (b->p > 0)
+	{
+		k = b->p;
+		tmp = b->array[k];
+		b->array[k] = b->array[k - 1];
+		b->array[k - 1] = tmp;
+	}
 }
 
 void	ss(t_stack *a, t_stack *b)
