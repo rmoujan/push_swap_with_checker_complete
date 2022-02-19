@@ -9,6 +9,7 @@ SRC=checker.c\
 	   operations3.c\
        operations4.c\
 	   ft_strjoin.c\
+	   operations5.c\
 	   checker_process.c
 
 OBJ = $(subst .c,.o,$(SRC))

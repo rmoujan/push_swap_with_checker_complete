@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmoujan <rmoujan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rmoujan < rmoujan@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 22:38:09 by rmoujan           #+#    #+#             */
-/*   Updated: 2022/02/19 15:34:42 by rmoujan          ###   ########.fr       */
+/*   Updated: 2022/02/19 16:47:44 by rmoujan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,15 @@ void	hlf1_a(t_stack *a, t_stack *chunks_a);
 void	hlf2_a(t_stack *a, t_stack *b, int *tab, int len);
 void	side_b(t_stack *a, t_stack *b, t_stack *chunks_b);
 void	selectionsort(int *arr, int n);
-void    full_c(t_stack *c, char **argv, int argc, t_stack *b);
-void    ft_checker(t_stack *c, t_stack *b);
+void	full_c(t_stack *c, char **argv, int argc, t_stack *b);
+void	ft_checker(t_stack *c, t_stack *b);
 void	ss(t_stack *a, t_stack *b);
 void	rr(t_stack *a, t_stack *b);
 void	rrr(t_stack *a, t_stack *b);
 char	**ft_split(char const *s1, char c);
 char	*ft_strjoin(char *s1, char *s2);
+void	rra1(t_stack *a);
+void	ra1(t_stack *a);
+void	rrb1(t_stack *b);
+void	rb1(t_stack *b);
 #endif

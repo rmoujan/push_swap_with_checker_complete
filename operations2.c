@@ -6,29 +6,51 @@
 /*   By: rmoujan < rmoujan@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 22:41:57 by rmoujan           #+#    #+#             */
-/*   Updated: 2022/02/19 16:30:36 by rmoujan          ###   ########.fr       */
+/*   Updated: 2022/02/19 16:48:20 by rmoujan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-void ss(t_stack *a, t_stack *b)
+void	sa1(t_stack *a)
 {
-	sa(a);
-	sb(b);
+	int	k;
+	int	tmp;
+
+	k = a->p;
+	tmp = a->array[k];
+	a->array[k] = a->array[k - 1];
+	a->array[k - 1] = tmp;
+}
+
+void	sb1(t_stack *b)
+{
+	int	k;
+	int	tmp;
+
+	k = b->p;
+	tmp = b->array[k];
+	b->array[k] = b->array[k - 1];
+	b->array[k - 1] = tmp;
+}
+
+void	ss(t_stack *a, t_stack *b)
+{
+	sa1(a);
+	sb1(b);
 	write(1, "ss\n", 3);
 }
 
-void rr(t_stack *a, t_stack *b)
+void	rr(t_stack *a, t_stack *b)
 {
-	ra(a);
-	rb(b);
+	ra1(a);
+	rb1(b);
 	write(1, "rr\n", 3);
 }
 
-void rrr(t_stack *a, t_stack *b)
+void	rrr(t_stack *a, t_stack *b)
 {
-	rra(a);
-	rrb(b);
+	rra1(a);
+	rrb1(b);
 	write(1, "rrr\n", 4);
 }

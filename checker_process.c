@@ -6,7 +6,7 @@
 /*   By: rmoujan < rmoujan@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 23:02:55 by rmoujan           #+#    #+#             */
-/*   Updated: 2022/02/19 16:27:54 by rmoujan          ###   ########.fr       */
+/*   Updated: 2022/02/19 16:49:50 by rmoujan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ static int	ft_cmp(char *s1, char *s2)
 	return (resultat);
 }
 
-void ft_error()
+void    ft_error(void)
 {
     write(2, "Error\n", 6);
 	exit(EXIT_FAILURE);
 }
 
-void half_process(t_stack *c, t_stack *b, char *ptr)
+void    half_process(t_stack *c, t_stack *b, char *ptr)
 {
     if (ft_cmp(ptr, "sa\0") == 0)
         sa(c);
@@ -69,7 +69,7 @@ void half_process(t_stack *c, t_stack *b, char *ptr)
         ft_error();
 }
 
-void process(t_stack *c, t_stack *b, char *str2)
+void    process(t_stack *c, t_stack *b, char *str2)
 {
     char **ptr;
     int i;

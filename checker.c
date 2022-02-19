@@ -6,7 +6,7 @@
 /*   By: rmoujan < rmoujan@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 22:45:43 by rmoujan           #+#    #+#             */
-/*   Updated: 2022/02/19 16:09:29 by rmoujan          ###   ########.fr       */
+/*   Updated: 2022/02/19 16:46:49 by rmoujan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,6 @@ int	main(int argc, char *argv[])
 	ft_checker(a, b);
 	if (check_sorted(a) == 0 && b->p == -1)
 		write(1, "ok\n", 3);
-    else
+	else
 		write(1, "ko\n", 3);
 }
