@@ -6,7 +6,7 @@
 /*   By: rmoujan < rmoujan@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 22:41:57 by rmoujan           #+#    #+#             */
-/*   Updated: 2022/02/19 17:57:05 by rmoujan          ###   ########.fr       */
+/*   Updated: 2022/02/19 21:43:13 by rmoujan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,19 +44,19 @@ void	ss(t_stack *a, t_stack *b)
 {
 	sa1(a);
 	sb1(b);
-	write(1, "ss\n", 3);
+	//write(1, "ss\n", 3);
 }
 
 void	rr(t_stack *a, t_stack *b)
 {
 	ra1(a);
 	rb1(b);
-	write(1, "rr\n", 3);
+	//write(1, "rr\n", 3);
 }
 
 void	rrr(t_stack *a, t_stack *b)
 {
 	rra1(a);
 	rrb1(b);
-	write(1, "rrr\n", 4);
+	//write(1, "rrr\n", 4);
 }

@@ -4,13 +4,13 @@ CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 SRC=checker.c\
        tools.c\
-	   ft_split.c\
        operations2.c\
 	   operations3.c\
        operations4.c\
-	   ft_strjoin.c\
 	   operations5.c\
-	   checker_process.c
+	   checker_process.c\
+	   get_next_line.c\
+	   get_next_line_utils.c
 
 OBJ = $(subst .c,.o,$(SRC))
 

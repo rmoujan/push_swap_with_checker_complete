@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmoujan < rmoujan@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/19 15:48:33 by rmoujan           #+#    #+#             */
-/*   Updated: 2022/02/19 15:48:40 by rmoujan          ###   ########.fr       */
+/*   Created: 2021/12/03 19:04:30 by rmoujan           #+#    #+#             */
+/*   Updated: 2022/02/19 21:31:49 by rmoujan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,40 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin(char **s1, char **s2)
 {
 	char	*p;
 
-	if (!s1 || !s2)
+	if (!*s1 || !*s2)
 		return (NULL);
-	p = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	p = malloc((ft_strlen(*s1) + ft_strlen(*s2) + 1) * sizeof(char));
 	if (p == NULL)
 		return (NULL);
-	p = ft_copy(s1, s2, p);
-	free(s1);
+	p = ft_copy(*s1, *s2, p);
+	ft_free(s1);
+	return (p);
+}
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*p;
+	size_t	i;
+
+	i = 0;
+	if (!s)
+		return (NULL);
+	p = malloc((len + 1) * sizeof(char));
+	if (p == NULL)
+		return (NULL);
+	if (start <= ft_strlen(s))
+	{
+		while (i < len && s)
+		{
+			p[i] = s[start];
+			i++;
+			start++;
+		}
+	}
+	p[i] = '\0';
 	return (p);
 }

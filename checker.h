@@ -6,7 +6,7 @@
 /*   By: rmoujan < rmoujan@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 22:38:09 by rmoujan           #+#    #+#             */
-/*   Updated: 2022/02/19 16:47:44 by rmoujan          ###   ########.fr       */
+/*   Updated: 2022/02/19 21:34:46 by rmoujan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <string.h>
+#define BUFFER_SIZE 5
 
 typedef struct s_stack	t_stack;
 struct	s_stack{
@@ -68,9 +69,16 @@ void	ss(t_stack *a, t_stack *b);
 void	rr(t_stack *a, t_stack *b);
 void	rrr(t_stack *a, t_stack *b);
 char	**ft_split(char const *s1, char c);
-char	*ft_strjoin(char *s1, char *s2);
 void	rra1(t_stack *a);
 void	ra1(t_stack *a);
 void	rrb1(t_stack *b);
 void	rb1(t_stack *b);
+char		*get_next_line(int fd);
+char		*ft_strjoin(char **s1, char **s2);
+char		*ft_substr(char const *s, unsigned int start, size_t len);
+size_t		ft_strlen(const char *str);
+int			ft_check(char *str);
+char		*ft_process(char **rest);
+void		*ft_free(char **p1);
+char		*ft_work(char **buffer, char **rest, int fd);
 #endif

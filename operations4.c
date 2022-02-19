@@ -6,7 +6,7 @@
 /*   By: rmoujan < rmoujan@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 22:40:20 by rmoujan           #+#    #+#             */
-/*   Updated: 2022/02/19 17:57:58 by rmoujan          ###   ########.fr       */
+/*   Updated: 2022/02/19 21:43:33 by rmoujan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	sa(t_stack *a)
 		tmp = a->array[k];
 		a->array[k] = a->array[k - 1];
 		a->array[k - 1] = tmp;
-		write(1, "sa\n", 3);
+		//write(1, "sa\n", 3);
 	}
 }
 
@@ -44,7 +44,7 @@ void	rb(t_stack *b)
 			k--;
 		}
 		b->array[k] = tmp1;
-		write(1, "rb\n", 3);
+		//write(1, "rb\n", 3);
 	}
 }
 
@@ -64,7 +64,7 @@ void	rrb(t_stack *b)
 			k++;
 		}
 		b->array[k] = tmp1;
-		write(1, "rrb\n", 4);
+		//write(1, "rrb\n", 4);
 	}
 }
 

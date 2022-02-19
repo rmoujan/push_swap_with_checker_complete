@@ -6,7 +6,7 @@
 /*   By: rmoujan < rmoujan@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 22:41:18 by rmoujan           #+#    #+#             */
-/*   Updated: 2022/02/19 17:57:30 by rmoujan          ###   ########.fr       */
+/*   Updated: 2022/02/19 21:43:25 by rmoujan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	sb(t_stack *b)
 		tmp = b->array[k];
 		b->array[k] = b->array[k - 1];
 		b->array[k - 1] = tmp;
-		write(1, "sb\n", 3);
+		//write(1, "sb\n", 3);
 	}
 }
 
@@ -37,7 +37,7 @@ void	pa(t_stack *a, t_stack *b)
 		k = b->p;
 		push(a, b->array[k]);
 		pop(b);
-		write(1, "pa\n", 3);
+		//write(1, "pa\n", 3);
 	}
 }
 
@@ -51,7 +51,7 @@ void	pb(t_stack *a, t_stack *b)
 		i = a->p;
 		push(b, a->array[i]);
 		pop(a);
-		write(1, "pb\n", 3);
+		//write(1, "pb\n", 3);
 	}
 }
 
@@ -71,7 +71,7 @@ void	rra(t_stack *a)
 			k++;
 		}
 		a->array[k] = tmp1;
-		write(1, "rra\n", 4);
+		//write(1, "rra\n", 4);
 	}
 }
 
@@ -91,6 +91,6 @@ void	ra(t_stack *a)
 			k--;
 		}
 		a->array[k] = tmp1;
-		write(1, "ra\n", 3);
+		//write(1, "ra\n", 3);
 	}
 }
