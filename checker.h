@@ -6,7 +6,7 @@
 /*   By: rmoujan <rmoujan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 22:38:09 by rmoujan           #+#    #+#             */
-/*   Updated: 2022/02/18 22:38:09 by rmoujan          ###   ########.fr       */
+/*   Updated: 2022/02/19 15:34:42 by rmoujan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,9 @@ void	side_b(t_stack *a, t_stack *b, t_stack *chunks_b);
 void	selectionsort(int *arr, int n);
 void    full_c(t_stack *c, char **argv, int argc, t_stack *b);
 void    ft_checker(t_stack *c, t_stack *b);
+void	ss(t_stack *a, t_stack *b);
+void	rr(t_stack *a, t_stack *b);
+void	rrr(t_stack *a, t_stack *b);
+char	**ft_split(char const *s1, char c);
+char	*ft_strjoin(char *s1, char *s2);
 #endif

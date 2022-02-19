@@ -3,58 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   operations2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmoujan <rmoujan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rmoujan < rmoujan@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 22:41:57 by rmoujan           #+#    #+#             */
-/*   Updated: 2022/02/18 22:41:57 by rmoujan          ###   ########.fr       */
+/*   Updated: 2022/02/19 16:30:36 by rmoujan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-void	chunks_sorthree(t_stack *a, t_stack *b)
+void ss(t_stack *a, t_stack *b)
 {
-	pb(a, b);
 	sa(a);
-	pa(a, b);
+	sb(b);
+	write(1, "ss\n", 3);
 }
 
-//hard-coded sort 3 with 24 lines:
-void	sort_three(t_stack *a, t_stack *b)
+void rr(t_stack *a, t_stack *b)
 {
-	if (a->array[a->p] > a->array[a->p - 1]
-		&& a->array[a->p - 1] > a->array[a->p - 2])
-	{
-		ra(a);
-		sa(a);
-	}
-	else if (a->array[a->p] < a->array[a->p - 1]
-		&& a->array[a->p] < a->array[a->p - 2])
-	{
-		if (a->array[a->p - 1] > a->array[a->p - 2])
-			chunks_sorthree(a, b);
-	}
-	else if (a->array[a->p] > a->array[a->p - 1]
-		&& a->array[a->p] < a->array[a->p - 2])
-		sa(a);
-	else if (a->array[a->p] > a->array[a->p - 1]
-		&& a->array[a->p] > a->array[a->p - 2])
-	{
-		ra(a);
-		if (a->array[a->p] > a->array[a->p - 1])
-			sa(a);
-	}
-	else if (a->array[a->p] < a->array[a->p - 1]
-		&& a->array[a->p] > a->array[a->p - 2])
-		rra(a);
+	ra(a);
+	rb(b);
+	write(1, "rr\n", 3);
 }
 
-void	small_sort(t_stack *a, t_stack *b, int argc)
+void rrr(t_stack *a, t_stack *b)
 {
-	if (argc == 4)
-		sort_three(a, b);
-	else if (argc == 3)
-		sa(a);
-	else
-		sort_five(a, b);
+	rra(a);
+	rrb(b);
+	write(1, "rrr\n", 4);
 }
