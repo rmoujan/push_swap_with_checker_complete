@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rmoujan < rmoujan@student.1337.ma>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/18 22:45:43 by rmoujan           #+#    #+#             */
-/*   Updated: 2022/02/20 22:04:19 by rmoujan          ###   ########.fr       */
+/*   Created: 2022/01/09 23:06:01 by rmoujan           #+#    #+#             */
+/*   Updated: 2022/02/20 19:39:36 by rmoujan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "push_swap.h"
 
 // add an item into the t_stack :
 void	push(t_stack *s, int n)
@@ -78,9 +78,11 @@ int	main(int argc, char *argv[])
 	chunks_swap(a, b, argv, j);
 	j = argc;
 	ft_check_doublons(&a, &b, j);
-	ft_checker(a, b);
-	if (check_sorted(a) == 0 && b->p == -1)
-		write(1, "ok\n", 3);
+	if (check_sorted(a) == 0)
+		exit(EXIT_FAILURE);
+	j = argc;
+	if (j <= 6)
+		small_sort(a, b, j);
 	else
-		write(1, "ko\n", 3);
+		side_a(a, b);
 }

@@ -3,60 +3,58 @@
 /*                                                        :::      ::::::::   */
 /*   operations2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmoujan < rmoujan@student.1337.ma>         +#+  +:+       +#+        */
+/*   By: rmoujan <rmoujan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/18 22:41:57 by rmoujan           #+#    #+#             */
-/*   Updated: 2022/02/19 21:43:13 by rmoujan          ###   ########.fr       */
+/*   Created: 2022/01/14 23:50:45 by rmoujan           #+#    #+#             */
+/*   Updated: 2022/02/14 21:56:03 by rmoujan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "push_swap.h"
 
-void	sa1(t_stack *a)
+void	chunks_sorthree(t_stack *a, t_stack *b)
 {
-	int	k;
-	int	tmp;
+	pb(a, b);
+	sa(a);
+	pa(a, b);
+}
 
-	if (a->p > 0)
+//hard-coded sort 3 with 24 lines:
+void	sort_three(t_stack *a, t_stack *b)
+{
+	if (a->array[a->p] > a->array[a->p - 1]
+		&& a->array[a->p - 1] > a->array[a->p - 2])
 	{
-		k = a->p;
-		tmp = a->array[k];
-		a->array[k] = a->array[k - 1];
-		a->array[k - 1] = tmp;
+		ra(a);
+		sa(a);
 	}
-}
-
-void	sb1(t_stack *b)
-{
-	int	k;
-	int	tmp;
-
-	if (b->p > 0)
+	else if (a->array[a->p] < a->array[a->p - 1]
+		&& a->array[a->p] < a->array[a->p - 2])
 	{
-		k = b->p;
-		tmp = b->array[k];
-		b->array[k] = b->array[k - 1];
-		b->array[k - 1] = tmp;
+		if (a->array[a->p - 1] > a->array[a->p - 2])
+			chunks_sorthree(a, b);
 	}
+	else if (a->array[a->p] > a->array[a->p - 1]
+		&& a->array[a->p] < a->array[a->p - 2])
+		sa(a);
+	else if (a->array[a->p] > a->array[a->p - 1]
+		&& a->array[a->p] > a->array[a->p - 2])
+	{
+		ra(a);
+		if (a->array[a->p] > a->array[a->p - 1])
+			sa(a);
+	}
+	else if (a->array[a->p] < a->array[a->p - 1]
+		&& a->array[a->p] > a->array[a->p - 2])
+		rra(a);
 }
 
-void	ss(t_stack *a, t_stack *b)
+void	small_sort(t_stack *a, t_stack *b, int argc)
 {
-	sa1(a);
-	sb1(b);
-	//write(1, "ss\n", 3);
-}
-
-void	rr(t_stack *a, t_stack *b)
-{
-	ra1(a);
-	rb1(b);
-	//write(1, "rr\n", 3);
-}
-
-void	rrr(t_stack *a, t_stack *b)
-{
-	rra1(a);
-	rrb1(b);
-	//write(1, "rrr\n", 4);
+	if (argc == 4)
+		sort_three(a, b);
+	else if (argc == 3)
+		sa(a);
+	else
+		sort_five(a, b);
 }

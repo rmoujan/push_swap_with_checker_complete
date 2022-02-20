@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rmoujan < rmoujan@student.1337.ma>         +#+  +:+       +#+        */
+/*   By: rmoujan <rmoujan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/18 22:35:25 by rmoujan           #+#    #+#             */
-/*   Updated: 2022/02/19 16:49:03 by rmoujan          ###   ########.fr       */
+/*   Created: 2022/01/12 18:43:56 by rmoujan           #+#    #+#             */
+/*   Updated: 2022/02/17 19:24:18 by rmoujan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+// I'm gonna write here all functions That I'll use for push_swap
+#include "push_swap.h"
 
 int	ft_sign(const char *str, int *sign)
 {
