@@ -1,4 +1,4 @@
-# Project Name
+# Push_swap
 1-Mandatory Part:
 
 Push_swap is a sorting algorithm project where the goal is to sort a stack of integers using a set of predefined operations. The project typically involves optimizing the sorting algorithm to use the minimum number of moves. 
